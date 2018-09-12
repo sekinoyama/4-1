@@ -5,11 +5,11 @@
  $password='パスワード';
  $pdo=new PDO($dsn,$user,$password);
 
- $sql="CREATE TABLE no"//3-2の内容、コメントの後ろに時間とパスワードの項目も作った方がいい？
+ $sql="CREATE TABLE no"
  ."("
  ."id int auto_increment primary key,"//idになる
  ."name char(32),"//名前。(32)は文字数の指定？
- ."comment TEXT,"//コメント。文章になれそう
+ ."comment TEXT,"//コメント。文章
  ."date datetime,"//日時のつもり。
  ."password varchar(10)"//パスワード。10文字指定にしてみたつもり。
  .");";
