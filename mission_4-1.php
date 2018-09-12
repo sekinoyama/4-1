@@ -104,8 +104,8 @@
 
 
 <?php
- $sql='SELECT*FROM no ORDER BY id ASC';//3-6の内容。*は全部のカラムを取得するときに使えるらしい。order...でidを順番に取得
- $results=$pdo->query($sql);//mysql_query()は削除されたらしい
+ $sql='SELECT*FROM no ORDER BY id ASC';//*は全部のカラムを取得するときに使えるらしい。order...でidを順番に取得
+ $results=$pdo->query($sql);
  foreach($results as $row){
   echo $row['id'].' ';
   echo $row['name'].' ';
