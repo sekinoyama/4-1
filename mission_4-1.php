@@ -8,9 +8,9 @@
  $sql="CREATE TABLE no"
  ."("
  ."id int auto_increment primary key,"//idになる
- ."name char(32),"//名前。(32)は文字数の指定？
+ ."name char(32),"//名前。
  ."comment TEXT,"//コメント。文章
- ."date datetime,"//日時のつもり。
+ ."date datetime,"//日時。
  ."password varchar(10)"//パスワード。10文字指定にしてみたつもり。
  .");";
  $stmt=$pdo->query($sql);
