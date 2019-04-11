@@ -44,7 +44,7 @@
 
 //削除時のコード
  if(!empty($delete) && !empty($dlt_pass)){
-  $sql='SELECT id,password FROM no';//データの取得ができるらしい。idを取得して削除番号と比較できないか？
+  $sql='SELECT id,password FROM no';//データの取得
   $results=$pdo->query($sql);
   foreach($results as $row){
    if($row['id']==$delete && $row['password']==$dlt_pass){//削除番号とパスワードの両方が一致したとき
@@ -53,7 +53,7 @@
    }elseif($row['id']==$delete && $row['password']!=$dlt_pass){
      echo "パスワード違います";
     }
-  }//foreachかっこ
+  }//foreachのカッコ
  }
 
 //編集から受け取る
@@ -70,7 +70,7 @@
     $edit_n=$row['name'];
     $edit_c=$row['comment'];
    }elseif($row['id']==$edit_number && $row['password']!=$edit_pass){
-     echo "パスワード違います";
+     echo "パスワードが違います";
     }
   }
  }
